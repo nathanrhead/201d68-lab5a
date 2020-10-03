@@ -82,11 +82,11 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 // var sumArr = testArray;
 function sumArray(sumArr) { //eslint-disable-line
-  var sumArrayAB = sum(testArray[0], testArray[1]); // 2 + 3 = 5
+  var sumArrayAB = sum(sumArr[0], sumArr[1]); // 2 + 3 = 5
   // console.log(sumArrayAB[0]);
-  var sumArrayABC = sum(sumArrayAB[0], testArray[2]); // 5 + 4 = 9
+  var sumArrayABC = sum(sumArrayAB[0], sumArr[2]); // 5 + 4 = 9
   // console.log(sumArrayABC[0]);
-  var string = testArray + ' was passed in as an array of numbers, and ' + sumArrayABC[0] + ' is their sum.'
+  var string = sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + sumArrayABC[0] + ' is their sum.'
   return [sumArrayABC[0], string];
 }
 
@@ -108,11 +108,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  var productAB = multiply(testArray[0], testArray[1]); // 2 * 3 = 6
+  var productAB = multiply(multArr[0], multArr[1]); // 2 * 3 = 6
   // console.log(productAB[0]);
-  var productABC = multiply(productAB[0], testArray[2]); // 6 * 4 = 24
+  var productABC = multiply(productAB[0], multArr[2]); // 6 * 4 = 24
   // console.log(productABC[0]);
-  var string = 'The numbers ' + testArray + ' have a product of ' + productABC[0] + '.';
+  var string = 'The numbers ' + multArr[0] +',' + multArr[1] + ',' + multArr[2]  + ' have a product of ' + productABC[0] + '.';
   return [productABC[0], string];
 }
 
@@ -141,7 +141,13 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  var sum = 1;
+    for (var i = 0; i < array.length; i++) {
+        productAllArray = multiply(sum, dynamicArray[i]);
+    }
+    console.log(productAllArray[0]);
+  var string = 'The numbers ' + dynamicArray[0] + ',' + dynamicArray[1] + ',' + dynamicArray[2] + ',' + dynamicArray[3] + ',' + dynamicArray[4] + ' have a product of 120.';
+  return [productArray[0], string];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
