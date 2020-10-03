@@ -83,6 +83,7 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 // var sumArr = testArray;
 function sumArray(sumArr) { //eslint-disable-line
   var sumArrayAB = sum(sumArr[0], sumArr[1]); // 2 + 3 = 5
+  //      x      = sum(  a      ,    b     )
   // console.log(sumArrayAB[0]);
   var sumArrayABC = sum(sumArrayAB[0], sumArr[2]); // 5 + 4 = 9
   // console.log(sumArrayABC[0]);
