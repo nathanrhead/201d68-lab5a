@@ -29,9 +29,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-  var productAb = a * b;
-  var string = 'The product of ' + a + ' and ' + b + ' is ' + productAb;
-  return [productAb, string];
+  var productAB = a * b;
+  var string = 'The product of ' + a + ' and ' + b + ' is ' + productAB + '.';
+  return [productAB, string];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -52,11 +52,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  var sumAB = sum(a, b); //this is 11
+  var sumABC = sum(sumAB[0], c); //this is 11 +5 
+  console.log(sumABC[0]);
+  var productAB = multiply(a, b); // this is 28 
+  var productABC = multiply(productAB[0], c); // this is 28 * 5
+  console.log(productABC[0]);
+  var stringOne = a + ' and ' + b + ' and ' + c + ' sum to ' + sumABC[0] + '.';
+  var stringTwo = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productABC[0] + '.';
+  return [sumABC[0], productABC[0], stringOne, stringTwo];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
