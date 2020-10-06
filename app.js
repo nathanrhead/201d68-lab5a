@@ -144,7 +144,6 @@ var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   var totalProduct = 1;
-  var sum = 1;
     for (var i = 0; i < dynamicArray.length; i++) {
         totalProduct = multiply(totalProduct, dynamicArray[i])[0]; // 1: 1 * 1 = 1; 2: 1 * 2 = 2; 3: 2 * 3 = 6; 4: 6 * 4 = 24; 5: 24 * 5 = 120;
     }
